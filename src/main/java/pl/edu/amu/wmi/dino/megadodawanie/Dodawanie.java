@@ -107,6 +107,45 @@ public class Dodawanie {
 
         String aa = a;
         String bb = b;
+        
+         if (bb.contains(":") && aa.contains(":"))
+         {
+             String[] split = bb.split(":");
+             String[] split1 = aa.split(":");
+             
+            int x = Integer.parseInt(split[0]);
+            int y = Integer.parseInt(split[1]);
+            int x1 = Integer.parseInt(split1[0]);
+            int y1= Integer.parseInt(split1[1]);
+            if((y + y1) > 60)
+            {
+                x = (x + x1 + 1) % 24;
+            }
+            else
+            {
+                x = (x + x1) % 24;
+            }
+            y = (y + y1) % 60;
+            
+           if(x < 10)
+          {
+              aa = Integer.toString(x);
+               aa = "0" + aa;
+           }
+           else aa = Integer.toString(x);
+           if(y < 10 )
+           {
+               bb = Integer.toString(y);
+               bb = "0" + bb;
+           }
+           else bb = Integer.toString(y);
+             
+             String wynik = aa + ":" + bb;
+             return wynik;
+            
+}
+        
+        
         Pattern pattern = Pattern.compile(","); //case insensitive, use [g] for only lower
         Matcher matcher1 = pattern.matcher(aa);
         int count1 = 0;

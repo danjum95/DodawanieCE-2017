@@ -187,5 +187,20 @@ public class DodawanieTest {
     
     //
 
+           //Aleksander Kruk
+     //Dodawanie kilogramów
+     @Test
+     public void testAdd109(){
+         assertEquals("10kg", Dodawanie.add("3kg", "7kg")); 
+    }
+     @Test
+     public void testAdd110(){
+         assertEquals("20kg", Dodawanie.add("30kg", "-10kg"));
+     }
+     @Test
+     public void testAdd111(){
+         assertEquals("2kg", Dodawanie.add("1kg", "1kg"));
+}
+    
 
 }

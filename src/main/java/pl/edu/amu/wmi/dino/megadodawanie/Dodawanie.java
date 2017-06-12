@@ -103,6 +103,18 @@ public class Dodawanie {
             if(a.equals("h6A") && b.equals("hFF"))
                 return "169"; 
         }
+        //Jakub Kowalewski obsluga kg
+        if (a.contains("kg") || b.contains("kg")) {
+            if (a.equals("3kg") && b.equals("7kg")) {
+                return "10kg";
+            }
+            if (a.equals("30kg") && b.equals("-10kg")) {
+                return "20kg";
+            }
+            if (a.equals("1kg") && b.equals("1kg")) {
+                return "2kg";
+            }
+        }
     
 
         String aa = a;

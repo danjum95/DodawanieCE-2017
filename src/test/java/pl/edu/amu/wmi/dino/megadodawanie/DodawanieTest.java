@@ -201,6 +201,22 @@ public class DodawanieTest {
      public void testAdd111(){
          assertEquals("2kg", Dodawanie.add("1kg", "1kg"));
 }
+    //Jakub Kowalewski
+    @Test
+    public void testAdd1001() throws ParseException{
+        assertEquals("2007.01.23", Dodawanie.add("2006.12.23", "1")); //data + ilosc miesiecy
+    }
+    
+    @Test
+    public void testAdd1002() throws ParseException{
+        assertEquals("2008.05.23", Dodawanie.add("2006.12.23", "12"));
+    }
+    
+    @Test
+    public void testAdd1003() throws ParseException{
+        assertEquals("2006.06.23", Dodawanie.add("2006.12.23", "-6"));
+    }
+    //
     
 
 }
